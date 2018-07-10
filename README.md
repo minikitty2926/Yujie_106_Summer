@@ -35,7 +35,7 @@
   
 ##### 作業
 
-  [R語言的基本語法](https://minikitty2926.github.io/yujie-106summer/Yujie_106_Summer/HW1/HW1.html)
+  [R語言的基本語法](https://minikitty2926.github.io/Yujie_106_Summer/HW1/HW1.html)
 
 ### 第二週
 
