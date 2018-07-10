@@ -35,4 +35,4 @@
   
 ##### 作業
 
-  [R語言的基本語法](https://minikitty2926.github.io/yujie/week1/week1.html)
+  [R語言的基本語法](https://minikitty2926.github.io/Yujie_106_Summer/HW1/HW1.html)
