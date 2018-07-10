@@ -1,11 +1,4 @@
----
-title: "R語言的基本語法"
-output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+# R語言的基本語法
 #### 106_Summer_HW1
 
 ## 什麼是R語言？
