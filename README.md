@@ -36,3 +36,23 @@
 ##### 作業
 
   [R語言的基本語法](https://minikitty2926.github.io/Yujie_106_Summer/HW1/HW1.html)
+
+### 第二週
+
+#### 課前
+
+    1.完成DataCamp課程
+
+#### 課堂中   
+
+
+#### 課後
+    
+     
+
+    
+  
+##### 作業
+
+  
+
