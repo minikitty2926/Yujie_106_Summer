@@ -49,7 +49,9 @@
     
     1.認識Package
     
-    2.完成任務一:使用R ggplot2進行資料視覺化
+    2.完成任務一：使用R ggplot2進行資料視覺化
+    
+    3.完成任務二：文字雲
 
 #### 課後
     
@@ -59,6 +61,6 @@
   
 ##### 作業
 
-  [第二週課堂任務&課後作業](https://minikitty2926.github.io/Yujie_106_Summer/Week2/HW2.html)
+  [資料視覺化&文字雲](https://minikitty2926.github.io/Yujie_106_Summer/Week2/HW2.html)
   
 

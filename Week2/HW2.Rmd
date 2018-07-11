@@ -1,4 +1,4 @@
-﻿---
+---
 title: "第二週"
 output: html_document
 ---
@@ -37,3 +37,9 @@ ggplot(iris, aes(x=Petal.Width , y= Sepal.Width)) +
   geom_boxplot()
 ```
 
+### ※任務二：文字雲
+####  ⊙網路爬蟲
+
+```{r}
+
+```
