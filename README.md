@@ -59,6 +59,6 @@
   
 ##### 作業
 
-  [第二週課堂任務&課後作業]
+  [第二週課堂任務&課後作業](https://minikitty2926.github.io/Yujie_106_Summer/Week2/HW2.html)
   
 
