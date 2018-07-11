@@ -1,0 +1,39 @@
+---
+title: "第二週"
+output: html_document
+---
+
+
+##### 2018/07/11
+
+### ※任務一：使用R ggplot2進行資料視覺化
+####  ⊙匯入內建資料庫
+```{r}
+    library(ggplot2)
+mtcars
+```    
+
+####  ⊙單變數：類別型
+```{r}
+    ggplot(data = mtcars, aes(x = gear)) +
+  geom_bar(fill = "pink", colour = "black")
+``` 
+
+####  ⊙單變數：連續型
+```{r}
+ggplot(data = morley, aes(x =Speed)) +
+  geom_histogram(fill = "pink", colour = "black")
+``` 
+
+####  ⊙雙變數：連續vs連續
+```{r}
+ggplot(data = iris, aes(x = Species, y=Petal.Width)) +
+  geom_point()
+```
+
+####  ⊙雙變數：離散vs連續
+```{r}
+ggplot(iris, aes(x=Petal.Width , y= Sepal.Width)) +
+  geom_boxplot()
+```
+
