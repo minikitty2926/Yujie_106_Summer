@@ -1,37 +1,37 @@
----
-title: "²Ä¤G¶g"
+ï»¿---
+title: "ç¬¬äºŒé€±"
 output: html_document
 ---
 
 
 ##### 2018/07/11
 
-### ¡°¥ô°È¤@¡G¨Ï¥ÎR ggplot2¶i¦æ¸ê®ÆµøÄ±¤Æ
-####  ¡ó¶×¤J¤º«Ø¸ê®Æ®w
+### â€»ä»»å‹™ä¸€ï¼šä½¿ç”¨R ggplot2é€²è¡Œè³‡æ–™è¦–è¦ºåŒ–
+####  âŠ™åŒ¯å…¥å…§å»ºè³‡æ–™åº«
 ```{r}
     library(ggplot2)
 mtcars
 ```    
 
-####  ¡ó³æÅÜ¼Æ¡GÃş§O«¬
+####  âŠ™å–®è®Šæ•¸ï¼šé¡åˆ¥å‹
 ```{r}
     ggplot(data = mtcars, aes(x = gear)) +
   geom_bar(fill = "pink", colour = "black")
 ``` 
 
-####  ¡ó³æÅÜ¼Æ¡G³sÄò«¬
+####  âŠ™å–®è®Šæ•¸ï¼šé€£çºŒå‹
 ```{r}
 ggplot(data = morley, aes(x =Speed)) +
   geom_histogram(fill = "pink", colour = "black")
 ``` 
 
-####  ¡óÂùÅÜ¼Æ¡G³sÄòvs³sÄò
+####  âŠ™é›™è®Šæ•¸ï¼šé€£çºŒvsé€£çºŒ
 ```{r}
 ggplot(data = iris, aes(x = Species, y=Petal.Width)) +
   geom_point()
 ```
 
-####  ¡óÂùÅÜ¼Æ¡GÂ÷´²vs³sÄò
+####  âŠ™é›™è®Šæ•¸ï¼šé›¢æ•£vsé€£çºŒ
 ```{r}
 ggplot(iris, aes(x=Petal.Width , y= Sepal.Width)) +
   geom_boxplot()
