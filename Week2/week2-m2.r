@@ -6,6 +6,8 @@ pttTestFunction(URL[1], filename[1])
 mapply(pttTestFunction, 
        URL = URL, filename = filename)
 
+
+
 rm(list=ls(all.names = TRUE))
 library(NLP)
 library(tm)
@@ -42,8 +44,95 @@ docs <- tm_map(docs, toSpace, "From")
 docs <- tm_map(docs, toSpace, "推")
 docs <- tm_map(docs, toSpace, "會")
 docs <- tm_map(docs, toSpace, "你")
+docs <- tm_map(docs, toSpace, "吧")
+docs <- tm_map(docs, toSpace, "喔")
+docs <- tm_map(docs, toSpace, "呀")
+docs <- tm_map(docs, toSpace, "好")
+docs <- tm_map(docs, toSpace, "棒")
+docs <- tm_map(docs, toSpace, "讚")
+docs <- tm_map(docs, toSpace, "來")
+docs <- tm_map(docs, toSpace, "先")
+docs <- tm_map(docs, toSpace, "看")
+docs <- tm_map(docs, toSpace, "今天")
+docs <- tm_map(docs, toSpace, "這樣")
+docs <- tm_map(docs, toSpace, "哈")
+docs <- tm_map(docs, toSpace, "效果")
+docs <- tm_map(docs, toSpace, "缺點")
+docs <- tm_map(docs, toSpace, "優點")
+docs <- tm_map(docs, toSpace, "了")
+docs <- tm_map(docs, toSpace, "嗎")
+docs <- tm_map(docs, toSpace, "一")
+docs <- tm_map(docs, toSpace, "看")
+docs <- tm_map(docs, toSpace, "純")
+docs <- tm_map(docs, toSpace, "下")
+docs <- tm_map(docs, toSpace, "上")
+docs <- tm_map(docs, toSpace, "沒")
+docs <- tm_map(docs, toSpace, "很")
+docs <- tm_map(docs, toSpace, "就")
+docs <- tm_map(docs, toSpace, "也")
+docs <- tm_map(docs, toSpace, "都")
+docs <- tm_map(docs, toSpace, "用")
+docs <- tm_map(docs, toSpace, "在")
+docs <- tm_map(docs, toSpace, "但")
+docs <- tm_map(docs, toSpace, "要")
+docs <- tm_map(docs, toSpace, "還")
+docs <- tm_map(docs, toSpace, "報")
+docs <- tm_map(docs, toSpace, "行")
+docs <- tm_map(docs, toSpace, "所以")
+docs <- tm_map(docs, toSpace, "比較")
+docs <- tm_map(docs, toSpace, "買")
+docs <- tm_map(docs, toSpace, "真")
+docs <- tm_map(docs, toSpace, "到")
+docs <- tm_map(docs, toSpace, "而且")
+docs <- tm_map(docs, toSpace, "其實")
+docs <- tm_map(docs, toSpace, "覺得")
+docs <- tm_map(docs, toSpace, "說")
+docs <- tm_map(docs, toSpace, "又")
+docs <- tm_map(docs, toSpace, "或")
+docs <- tm_map(docs, toSpace, "過")
+docs <- tm_map(docs, toSpace, "再")
+docs <- tm_map(docs, toSpace, "可能")
+docs <- tm_map(docs, toSpace, "太")
+docs <- tm_map(docs, toSpace, "為什麼")
+docs <- tm_map(docs, toSpace, "什麼")
+docs <- tm_map(docs, toSpace, "東西")
+docs <- tm_map(docs, toSpace, "版主")
+docs <- tm_map(docs, toSpace, "之前")
+docs <- tm_map(docs, toSpace, "如果")
+docs <- tm_map(docs, toSpace, "像")
+docs <- tm_map(docs, toSpace, "這個")
+docs <- tm_map(docs, toSpace, "感覺")
+docs <- tm_map(docs, toSpace, "問題")
+docs <- tm_map(docs, toSpace, "對")
+docs <- tm_map(docs, toSpace, "耶")
+docs <- tm_map(docs, toSpace, "貼")
+docs <- tm_map(docs, toSpace, "文")
+docs <- tm_map(docs, toSpace, "分享")
+
 
 docs <- tm_map(docs, removePunctuation)
 docs <- tm_map(docs, removeNumbers)
 docs <- tm_map(docs, stripWhitespace)
 docs
+
+mixseg = worker()
+jieba_tokenizer=function(d){
+  unlist(segment(d[[1]],mixseg))
+}
+seg = lapply(docs, jieba_tokenizer)
+freqFrame = as.data.frame(table(unlist(seg)))
+freqFrame = freqFrame[order(freqFrame$Freq,decreasing=TRUE), ]
+library(knitr)
+kable(head(freqFrame), format = "markdown")
+
+wordcloud(freqFrame$Var1,freqFrame$Freq,
+          scale=c(5,0.1),min.freq=50,max.words=150,
+          random.order=TRUE, random.color=FALSE, 
+          rot.per=.1, colors=brewer.pal(8, "Dark2"),
+          ordered.colors=FALSE,use.r.layout=FALSE,
+          fixed.asp=TRUE)
+
+
+
+
+
