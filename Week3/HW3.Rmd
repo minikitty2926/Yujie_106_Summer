@@ -21,8 +21,7 @@ splitTitle <- function(x){
 ```
 
 ```{r}
-TestData$Surname <- Temp[1,]
-TestData$Title <- Temp[2,]
+
 ```
 
 

@@ -1,3 +1,12 @@
-read.csv('./DATA/hearthstone-cards/cards.csv')
+TestData = read.csv('./DATA/hearthstone-cards/cards.csv')
+
+Names = TestData$Name
+splitTitle <- function(x){
+  strsplit(x, split='[_]')
+  Temp = sapply(Factor(card_id), splitTitle)
 
 
+
+
+TestData$Surname <- Temp[1,]
+TestData$Title <- Temp[2,]
