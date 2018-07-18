@@ -1,0 +1,34 @@
+## 第三週作業
+
+### 任務一：完成EDA
+
+  [爐石卡牌-資料來源](https://www.kaggle.com/jeradrose/hearthstone-cards)
+
+#### ⊙資料蒐集
+      
+```{r}
+TestData = read.csv('./DATA/hearthstone-cards/cards.csv')
+```
+
+#### ⊙利用split & apply找出卡牌ID命名規則
+
+```{r}
+Names = TestData$Name
+splitTitle <- function(x){
+  strsplit(x, split='[_]')
+  Temp = sapply(factor(card_id), splitTitle)
+}
+```
+
+```{r}
+TestData$Surname <- Temp[1,]
+TestData$Title <- Temp[2,]
+```
+
+
+
+
+
+
+
+

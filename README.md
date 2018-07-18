@@ -71,9 +71,11 @@
     
     1.閱讀第三週PPT
 
-
 #### 課堂中   
     
+    1.學習如何完成任務一：EDA
+    
+    2.學習如何完成任務二：TF-ITF
    
 
 #### 課後
@@ -81,5 +83,5 @@
    
      
 ##### 作業
-  
+  [EDA&TF-ITF](https://minikitty2926.github.io/Yujie_106_Summer/Week3/HW3.html) 
 

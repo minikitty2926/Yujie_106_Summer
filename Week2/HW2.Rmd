@@ -1,44 +1,44 @@
 ---
-title: "第二週"
+title: "蝚砌??"
 output: html_document
 ---
 
 
 ##### 2018/07/11
 
-### ※任務一：使用R ggplot2進行資料視覺化
-####  ⊙匯入內建資料庫
+### ?颱遙???嚗蝙?R ggplot2?脰????死???
+####  ????撱箄??澈
 ```{r}
     library(ggplot2)
 mtcars
 ```    
 
-####  ⊙單變數：類別型
+####  ??霈嚗????
 ```{r}
     ggplot(data = mtcars, aes(x = gear)) +
   geom_bar(fill = "pink", colour = "black")
 ``` 
 
-####  ⊙單變數：連續型
+####  ??霈嚗?蝥??
 ```{r}
 ggplot(data = morley, aes(x =Speed)) +
   geom_histogram(fill = "pink", colour = "black")
 ``` 
 
-####  ⊙雙變數：連續vs連續
+####  ????嚗?蝥s??蝥?
 ```{r}
 ggplot(data = iris, aes(x = Species, y=Petal.Width)) +
   geom_point()
 ```
 
-####  ⊙雙變數：離散vs連續
+####  ????嚗?vs??蝥?
 ```{r}
 ggplot(iris, aes(x=Petal.Width , y= Sepal.Width)) +
   geom_boxplot()
 ```
 
-### ※任務二：文字雲
-####  ⊙網路爬蟲
+### ?颱遙??????
+####  ??雯頝舐?
 
 ```{r}
 source('pttTestFunction.R')
@@ -52,7 +52,7 @@ mapply(pttTestFunction,
 
 ![EX1](https://i.imgur.com/9fYcfXM.png)
 
-####  ⊙文本清理
+####  ???皜??
 
 ```{r}
 rm(list=ls(all.names = TRUE))
@@ -69,92 +69,92 @@ toSpace <- content_transformer(function(x, pattern) {
   return (gsub(pattern, " ", x))
 }
 )
-docs <- tm_map(docs, toSpace, "※")
-docs <- tm_map(docs, toSpace, "◆")
-docs <- tm_map(docs, toSpace, "‧")
-docs <- tm_map(docs, toSpace, "的")
-docs <- tm_map(docs, toSpace, "我")
-docs <- tm_map(docs, toSpace, "是")
-docs <- tm_map(docs, toSpace, "看板")
-docs <- tm_map(docs, toSpace, "作者")
-docs <- tm_map(docs, toSpace, "發信站")
-docs <- tm_map(docs, toSpace, "批踢踢實業坊")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "雿?")
+docs <- tm_map(docs, toSpace, "?靽∠??")
+docs <- tm_map(docs, toSpace, "?頦Ｚ腺撖行平???")
 docs <- tm_map(docs, toSpace, "[a-zA-Z]")
-docs <- tm_map(docs, toSpace, "大")
-docs <- tm_map(docs, toSpace, "小")
-docs <- tm_map(docs, toSpace, "可以")
-docs <- tm_map(docs, toSpace, "大家")
-docs <- tm_map(docs, toSpace, "來自")
-docs <- tm_map(docs, toSpace, "不")
-docs <- tm_map(docs, toSpace, "有")
+docs <- tm_map(docs, toSpace, "憭?")
+docs <- tm_map(docs, toSpace, "撠?")
+docs <- tm_map(docs, toSpace, "?隞?")
+docs <- tm_map(docs, toSpace, "憭批振")
+docs <- tm_map(docs, toSpace, "靘")
+docs <- tm_map(docs, toSpace, "銝?")
+docs <- tm_map(docs, toSpace, "???")
 docs <- tm_map(docs, toSpace, "From")
-docs <- tm_map(docs, toSpace, "推")
-docs <- tm_map(docs, toSpace, "會")
-docs <- tm_map(docs, toSpace, "你")
-docs <- tm_map(docs, toSpace, "吧")
-docs <- tm_map(docs, toSpace, "喔")
-docs <- tm_map(docs, toSpace, "呀")
-docs <- tm_map(docs, toSpace, "好")
-docs <- tm_map(docs, toSpace, "棒")
-docs <- tm_map(docs, toSpace, "讚")
-docs <- tm_map(docs, toSpace, "來")
-docs <- tm_map(docs, toSpace, "先")
-docs <- tm_map(docs, toSpace, "看")
-docs <- tm_map(docs, toSpace, "今天")
-docs <- tm_map(docs, toSpace, "這樣")
-docs <- tm_map(docs, toSpace, "哈")
-docs <- tm_map(docs, toSpace, "效果")
-docs <- tm_map(docs, toSpace, "缺點")
-docs <- tm_map(docs, toSpace, "優點")
-docs <- tm_map(docs, toSpace, "了")
-docs <- tm_map(docs, toSpace, "嗎")
-docs <- tm_map(docs, toSpace, "一")
-docs <- tm_map(docs, toSpace, "看")
-docs <- tm_map(docs, toSpace, "純")
-docs <- tm_map(docs, toSpace, "下")
-docs <- tm_map(docs, toSpace, "上")
-docs <- tm_map(docs, toSpace, "沒")
-docs <- tm_map(docs, toSpace, "很")
-docs <- tm_map(docs, toSpace, "就")
-docs <- tm_map(docs, toSpace, "也")
-docs <- tm_map(docs, toSpace, "都")
-docs <- tm_map(docs, toSpace, "用")
-docs <- tm_map(docs, toSpace, "在")
-docs <- tm_map(docs, toSpace, "但")
-docs <- tm_map(docs, toSpace, "要")
-docs <- tm_map(docs, toSpace, "還")
-docs <- tm_map(docs, toSpace, "報")
-docs <- tm_map(docs, toSpace, "行")
-docs <- tm_map(docs, toSpace, "所以")
-docs <- tm_map(docs, toSpace, "比較")
-docs <- tm_map(docs, toSpace, "買")
-docs <- tm_map(docs, toSpace, "真")
-docs <- tm_map(docs, toSpace, "到")
-docs <- tm_map(docs, toSpace, "而且")
-docs <- tm_map(docs, toSpace, "其實")
-docs <- tm_map(docs, toSpace, "覺得")
-docs <- tm_map(docs, toSpace, "說")
-docs <- tm_map(docs, toSpace, "又")
-docs <- tm_map(docs, toSpace, "或")
-docs <- tm_map(docs, toSpace, "過")
-docs <- tm_map(docs, toSpace, "再")
-docs <- tm_map(docs, toSpace, "可能")
-docs <- tm_map(docs, toSpace, "太")
-docs <- tm_map(docs, toSpace, "為什麼")
-docs <- tm_map(docs, toSpace, "什麼")
-docs <- tm_map(docs, toSpace, "東西")
-docs <- tm_map(docs, toSpace, "版主")
-docs <- tm_map(docs, toSpace, "之前")
-docs <- tm_map(docs, toSpace, "如果")
-docs <- tm_map(docs, toSpace, "像")
-docs <- tm_map(docs, toSpace, "這個")
-docs <- tm_map(docs, toSpace, "感覺")
-docs <- tm_map(docs, toSpace, "問題")
-docs <- tm_map(docs, toSpace, "對")
-docs <- tm_map(docs, toSpace, "耶")
-docs <- tm_map(docs, toSpace, "貼")
-docs <- tm_map(docs, toSpace, "文")
-docs <- tm_map(docs, toSpace, "分享")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "雿?")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "憟?")
+docs <- tm_map(docs, toSpace, "璉?")
+docs <- tm_map(docs, toSpace, "霈?")
+docs <- tm_map(docs, toSpace, "靘?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "隞予")
+docs <- tm_map(docs, toSpace, "?見")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "????")
+docs <- tm_map(docs, toSpace, "蝻粹??")
+docs <- tm_map(docs, toSpace, "?暺?")
+docs <- tm_map(docs, toSpace, "鈭?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "銝")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "蝝?")
+docs <- tm_map(docs, toSpace, "銝?")
+docs <- tm_map(docs, toSpace, "銝?")
+docs <- tm_map(docs, toSpace, "瘝?")
+docs <- tm_map(docs, toSpace, "敺?")
+docs <- tm_map(docs, toSpace, "撠?")
+docs <- tm_map(docs, toSpace, "銋?")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "雿?")
+docs <- tm_map(docs, toSpace, "閬?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "銵?")
+docs <- tm_map(docs, toSpace, "??隞?")
+docs <- tm_map(docs, toSpace, "瘥??")
+docs <- tm_map(docs, toSpace, "鞎?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "?撖?")
+docs <- tm_map(docs, toSpace, "閬箏??")
+docs <- tm_map(docs, toSpace, "隤?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "憭?")
+docs <- tm_map(docs, toSpace, "?隞暻?")
+docs <- tm_map(docs, toSpace, "隞暻?")
+docs <- tm_map(docs, toSpace, "?镼?")
+docs <- tm_map(docs, toSpace, "??蜓")
+docs <- tm_map(docs, toSpace, "銋??")
+docs <- tm_map(docs, toSpace, "憒??")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "??死")
+docs <- tm_map(docs, toSpace, "????")
+docs <- tm_map(docs, toSpace, "撠?")
+docs <- tm_map(docs, toSpace, "??")
+docs <- tm_map(docs, toSpace, "鞎?")
+docs <- tm_map(docs, toSpace, "???")
+docs <- tm_map(docs, toSpace, "??澈")
 
 
 docs <- tm_map(docs, removePunctuation)
@@ -163,7 +163,7 @@ docs <- tm_map(docs, stripWhitespace)
 docs
 ```
 
-####  ⊙詞頻矩陣
+####  ?????
 
 ```{r}
 mixseg = worker()
@@ -177,7 +177,7 @@ library(knitr)
 kable(head(freqFrame), format = "markdown")
 ```
 
-####  ⊙文字雲
+####  ????
 ```{r}
 wordcloud(freqFrame$Var1,freqFrame$Freq,
           scale=c(5,0.1),min.freq=50,max.words=150,
